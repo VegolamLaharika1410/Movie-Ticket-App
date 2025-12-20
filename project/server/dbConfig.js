@@ -1,11 +1,11 @@
 const mongoose=require('mongoose');
-// mongoose.connect('mongodb+srv://laharika:<db_password>@cluster0.edfvjbg.mongodb.net/?appName=Cluster0')
-// .then(()=>{
-//     console.log('DB Connected');
-// })
-// .catch(()=>{
-//     console.log('Failed to connect')
-// })
+// // mongoose.connect('mongodb+srv://laharika:<db_password>@cluster0.edfvjbg.mongodb.net/?appName=Cluster0')
+// // .then(()=>{
+// //     console.log('DB Connected');
+// // })
+// // .catch(()=>{
+// //     console.log('Failed to connect')
+// // })
 
 const connectDB= async ()=>{
     try{
@@ -19,3 +19,4 @@ const connectDB= async ()=>{
 module.exports={
     connectDB
 }
+

@@ -1,6 +1,6 @@
+require('dotenv').config();
 const express=require('express');
 const dbConnection=require('./dbConfig.js');
-require('dotenv').config();
 const app=express();
 app.use(express.json());
 
@@ -15,3 +15,5 @@ app.get('/',(req,res)=>{
 app.listen(8001,()=>{
     console.log("server started");
 })
+
+
