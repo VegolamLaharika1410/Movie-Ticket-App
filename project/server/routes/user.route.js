@@ -37,4 +37,19 @@ userRouter.post('/register',async(req,res)=>{
             });
     }
 });
+
+userRouter.post('/login',async(req,res)=>{
+    try{
+        const user=await req.findOne(req.body.email);
+        if(!user){
+            res.send({
+                success:false,
+                message:'User not registered. Please register'
+            });
+        }
+
+    }catch(error){
+
+    }
+})
 module.exports=userRouter;
