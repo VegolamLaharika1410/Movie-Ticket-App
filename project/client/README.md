@@ -29,5 +29,6 @@ npm install react-router-dom@6 @vitejs/plugin-react@4 eslint@8 vite@5
 npm install antd
 # for checking verison
 npm ls antd
-
+# install axios for backend connection
+npm install axios
 

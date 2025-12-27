@@ -3,6 +3,9 @@ import { Button, Form, Input } from "antd";
 import {Link} from "react-router-dom"
 
 function Login() {
+    const onSubmit=(values)=>{
+        console.log(values);
+    }
   return (
     <>
     <header className="App-header">
@@ -12,7 +15,7 @@ function Login() {
         </section>
 
         <section className="right-section">
-          <Form layout="vertical">
+          <Form layout="vertical" onFinish={onSubmit}>
     
           <Form.Item
               label="Email"
