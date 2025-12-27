@@ -40,16 +40,27 @@ userRouter.post('/register',async(req,res)=>{
 
 userRouter.post('/login',async(req,res)=>{
     try{
-        const user=await req.findOne(req.body.email);
+        const user=await User.findOne({email:req.body.email});
         if(!user){
             res.send({
                 success:false,
                 message:'User not registered. Please register'
             });
         }
+        const validatePassword=bcrypt.compare(req.body.password,user.password);
+        if(!validatePassword){
+            res.send({
+                success:false,
+                message:"Sorry, Invaild password entered"
+            });
+        }
+        res.send({
+            success:true,
+            message:"You have logged in successfully"
+        });
 
     }catch(error){
-
+        res.status(500).json({message:'Error in Logging in'});
     }
 })
 module.exports=userRouter;
