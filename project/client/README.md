@@ -14,3 +14,20 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+for react router dom to install for routing
+npm remove react-router-dom @vitejs/plugin-react eslint
+
+npm install react-router-dom@6 @vitejs/plugin-react@4 eslint@
+
+# Remove incompatible ESLint
+npm remove eslint
+
+# Install Node 18-compatible versions
+npm install react-router-dom@6 @vitejs/plugin-react@4 eslint@8 vite@5
+# for installing antd
+npm install antd
+# for checking verison
+npm ls antd
+
+
