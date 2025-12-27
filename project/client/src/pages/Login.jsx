@@ -1,10 +1,22 @@
 import React from 'react'
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input ,message} from "antd";
 import {Link} from "react-router-dom"
+import { login } from '../calls/authCalls';
 
 function Login() {
-    const onSubmit=(values)=>{
-        console.log(values);
+    const onSubmit=async(values)=>{
+        try{
+         console.log(values);
+        const userData=await login(values);
+        console.log(userData);
+        if(userData.success){
+            message.success(userData.message);
+        }else{
+            message.error(userData.message);
+        }
+        }catch(error){
+            console.log(error.message);
+        }
     }
   return (
     <>

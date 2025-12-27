@@ -14,3 +14,11 @@ export const register=async(values)=>{
         console.log(error);
     }
 }
+export const login=async(values)=>{
+    try{
+        const response=await api.post('/api/auth/login',values);
+        return response.data;
+    }catch(error){
+        console.log(error);
+    }
+}
